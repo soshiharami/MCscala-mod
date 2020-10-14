@@ -4,7 +4,6 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation
 import net.minecraft.creativetab.CreativeTabs
 import net.minecraft.init.Blocks
 import net.minecraft.item.Item
-import net.minecraft.util.ResourceLocation
 import net.minecraftforge.client.model.ModelLoader
 import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.common.Mod.EventHandler
@@ -28,9 +27,8 @@ object MyMod {
             .setCreativeTab(CreativeTabs.MATERIALS)
             .setUnlocalizedName("ruby")
             .setRegistryName("ruby")
-            .setMaxStackSize(64);
-        ForgeRegistries.ITEMS.register(ruby);
-        ModelLoader.setCustomModelResourceLocation(ruby,0,new ModelResourceLocation(new ResourceLocation("mymod", "ruby"), "inventory"));
-
+            .setMaxStackSize(64)
+        ForgeRegistries.ITEMS.register(ruby)
+        ModelLoader.setCustomModelResourceLocation(ruby, 0, new ModelResourceLocation("ruby", "inventory"))
     }
 }
